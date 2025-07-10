@@ -4,6 +4,8 @@ const leftButton = document.querySelector('.left');
 const rightButton = document.querySelector('.right');
 const circlesContainer = document.querySelector('.circles-container');
 
+let circles = [];
+
 images = ['./images/1.png', './images/2.jpg', './images/3.jpg'];
 let currentImage = 0;
 
@@ -31,7 +33,6 @@ displayImage();
 displayCircles();
 
 function displayCircles() {
-    let circles = [];
     //Assigning circles to the right images
     for (let i = 0; i < images.length; i++) {
         const buttonContainer = document.createElement('button');
@@ -45,7 +46,15 @@ function displayCircles() {
 
     //Displaying them
     for (let circle of circles) {
+
+        const targetDisplay = () => {
+            currentImage = circles.indexOf(circle);
+            displayImage();
+            displayCircles();
+        };
+
         circlesContainer.appendChild(circle);
+        circle.addEventListener('click', targetDisplay);
     }
 }
 
