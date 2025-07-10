@@ -11,6 +11,7 @@ const previousImage = () => {
     if (currentImage > 0) {
         currentImage--;
         displayImage();
+        displayCircles();
     }
 };
 
@@ -18,6 +19,7 @@ const nextImage = () => {
     if (currentImage < images.length - 1) {
         currentImage++;
         displayImage();
+        displayCircles();
     }
 };
 
@@ -26,6 +28,26 @@ const displayImage = () => {
 };
 
 displayImage();
+displayCircles();
+
+function displayCircles() {
+    let circles = [];
+    //Assigning circles to the right images
+    for (let i = 0; i < images.length; i++) {
+        const buttonContainer = document.createElement('button');
+        const circleImage = document.createElement('img');
+        (i === currentImage) ? circleImage.src = './images/circle-double.svg' : circleImage.src = './images/circle-outline.svg';
+        buttonContainer.appendChild(circleImage);
+        circles[i] = buttonContainer;
+    }
+
+    circlesContainer.textContent = '';
+
+    //Displaying them
+    for (let circle of circles) {
+        circlesContainer.appendChild(circle);
+    }
+}
 
 leftButton.addEventListener('click', previousImage);
 rightButton.addEventListener('click', nextImage);
