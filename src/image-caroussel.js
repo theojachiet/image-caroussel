@@ -90,7 +90,7 @@ function displayImageCaroussel(wrapper, images, leftArrow, rightArrow, circleEmp
     //Initial display and clock running
     displayImage();
     displayCircles();
-    setInterval(nextImage, delay);
+    if (delay) setInterval(nextImage, delay);
 }
 
 const wrapper = document.querySelector('.wrapper');
