@@ -1,0 +1,20 @@
+{
+  "name": "@teoslip/image-caroussel",
+  "version": "1.0.0",
+  "description": "attempt at a package for an image caroussel <br> You can import displayImageCaroussel to have an easy way to implement one. With this function, you are dynamically displaying a caroussel in js. You still need to provide the css code to make it look like one (example provided below). <br> The function takes 7 arguments :  1. a wrapper (a DOM element in which the caroussel will be applied) 2. an images array (an array of strings with the relative path to the images you want displayed in their order). 3. a left arrow icon image path (preferably svg) 4. same for right arrow 5. An empty circle image path (preferably svg) to put under the caroussel to display where we are in the images order. 6. A full circle image path to know where the image currently displayed is. 7. A delay timeout you want your images to rotate automatically (you can ignore this argument if you don't want automatic scrolling). <hr>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theojachiet/image-caroussel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theojachiet/image-caroussel/issues"
+  },
+  "homepage": "https://github.com/theojachiet/image-caroussel#readme"
+}

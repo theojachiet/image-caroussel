@@ -1,4 +1,4 @@
-function displayImageCaroussel(wrapper, images, leftArrow, rightArrow, circleEmpty, circleFull, delay) {
+export function displayImageCaroussel(wrapper, images, leftArrow, rightArrow, circleEmpty, circleFull, delay) {
     //Creating containers
     const generalContainer = document.createElement('div');
     generalContainer.classList.add('general-container');
@@ -92,7 +92,3 @@ function displayImageCaroussel(wrapper, images, leftArrow, rightArrow, circleEmp
     displayCircles();
     if (delay) setInterval(nextImage, delay);
 }
-
-const wrapper = document.querySelector('.wrapper');
-
-displayImageCaroussel(wrapper, ['./images/1.png', './images/2.jpg', './images/3.jpg'], './images/chevron-left.svg', './images/chevron-right.svg', './images/circle-outline.svg', './images/circle-double.svg', 5000)
