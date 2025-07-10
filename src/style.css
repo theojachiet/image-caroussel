@@ -21,7 +21,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-image: url(./images/qdsfkjlm.jpg);
+    /* background-image: url(./images/2.jpg); */
     background-size: cover;
     background-position-y: center;
 }
@@ -33,6 +33,14 @@ body {
     height: 40px;
     width: 40px;
     opacity: 0.5;
+}
+
+button.left {
+    border-radius: 0px 10px 10px 0px;
+}
+
+button.right {
+    border-radius: 10px 0px 0px 10px;
 }
 
 .circles-container {
@@ -49,6 +57,6 @@ body {
     width: 25px;
 }
 
-.circles-container button:hover, .caroussel-container button:hover {
+button:hover {
     cursor: pointer;
 }
